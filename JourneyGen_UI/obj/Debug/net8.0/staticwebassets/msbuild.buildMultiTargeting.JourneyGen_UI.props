@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\JourneyGen_UI.props" />
+</Project>

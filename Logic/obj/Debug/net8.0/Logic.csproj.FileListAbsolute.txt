@@ -1,0 +1,12 @@
+E:\SoftwareDevelopmentHub\Projects\JourneyGen\Frontend\Logic\bin\Debug\net8.0\Logic.deps.json
+E:\SoftwareDevelopmentHub\Projects\JourneyGen\Frontend\Logic\bin\Debug\net8.0\Logic.dll
+E:\SoftwareDevelopmentHub\Projects\JourneyGen\Frontend\Logic\bin\Debug\net8.0\Logic.pdb
+E:\SoftwareDevelopmentHub\Projects\JourneyGen\Frontend\Logic\obj\Debug\net8.0\Logic.csproj.AssemblyReference.cache
+E:\SoftwareDevelopmentHub\Projects\JourneyGen\Frontend\Logic\obj\Debug\net8.0\Logic.GeneratedMSBuildEditorConfig.editorconfig
+E:\SoftwareDevelopmentHub\Projects\JourneyGen\Frontend\Logic\obj\Debug\net8.0\Logic.AssemblyInfoInputs.cache
+E:\SoftwareDevelopmentHub\Projects\JourneyGen\Frontend\Logic\obj\Debug\net8.0\Logic.AssemblyInfo.cs
+E:\SoftwareDevelopmentHub\Projects\JourneyGen\Frontend\Logic\obj\Debug\net8.0\Logic.csproj.CoreCompileInputs.cache
+E:\SoftwareDevelopmentHub\Projects\JourneyGen\Frontend\Logic\obj\Debug\net8.0\Logic.dll
+E:\SoftwareDevelopmentHub\Projects\JourneyGen\Frontend\Logic\obj\Debug\net8.0\refint\Logic.dll
+E:\SoftwareDevelopmentHub\Projects\JourneyGen\Frontend\Logic\obj\Debug\net8.0\Logic.pdb
+E:\SoftwareDevelopmentHub\Projects\JourneyGen\Frontend\Logic\obj\Debug\net8.0\ref\Logic.dll

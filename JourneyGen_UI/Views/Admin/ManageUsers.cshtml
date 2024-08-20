@@ -1,0 +1,243 @@
+﻿@model ManageUserViewModel
+
+<div class="container-fluid">
+	<div class="row">
+		
+		<div class="col col-lg-3 col-xl-1 bg-white  shadow-lg" style="width: 25vh;">
+			<img src="~/images/Jounrey_Gen_Logo_WithText.png" alt="logo" class="p-3 my-2" style="object-fit:contain; display:inline-block; height:auto; width:100%;">
+
+				<div class="container align-items-center me-3">
+
+
+					<a class="btn btn-warning btn-large d-block my-4 fw-bold text-light fs-5 shadow-lg" style="background-color:darkorange;" asp-controller="Home" asp-action="GroupBoard">Post to Group</a>
+
+					<a class="btn btn-transparent btn-large d-block fw-bold fs-5 mb-3" style="color:darkorange;" asp-controller="Home" asp-action="ReturnHome">Home</a>
+
+					<a class="btn btn-transparent btn-large d-block fw-bold text-secondary fs-5 mb-3" asp-controller="Home" asp-action="GroupBoard">Group</a>
+
+					<a class="btn btn-transparent btn-large d-block fw-bold text-secondary fs-5 mb-3" asp-controller="BibleIndex" asp-action="BibleIndex">Bible</a>
+
+					<a class="btn btn-transparent btn-large d-block fw-bold text-secondary fs-5 mb-3">Resources</a>
+
+					<a class="btn btn-transparent btn-large d-block fw-bold text-secondary fs-5 mb-3" asp-controller="Admin" asp-action="InitAdmin">Admin</a>
+
+					<a class="btn btn-transparent btn-large d-block fw-bold text-secondary fs-5 mb-3 mt-5">Settings</a>
+
+				</div>
+
+				<img src="~/images/JourneyGenMobile_Promo.jpg" alt="promo" style="width: 100%; height: 36vh; object-fit:cover;" class="rounded-4 shadow-lg mt-1">
+
+		</div>
+
+		<div class="col">
+			<div class="row">
+				<div class="container-fluid rounded-4 bg-white shadow-lg text-center my-4 mx-3" style="margin:0px;">
+					<h1 class="my-5">Manage Leaders</h1>
+					<table style="width:100%;">
+						<tr>
+							<th class="table-cell-padding">Id</th>
+							<th class="table-cell-padding">Name</th>
+							<th class="table-cell-padding">Email</th>
+							<th class="table-cell-padding">Phone-Number</th>
+							<th class="table-cell-padding">Gender</th>
+							<th class="table-cell-padding">Active</th>
+							<th class="table-cell-padding">Verified</th>
+							<th class="table-cell-padding">Role</th>
+							<th class="table-cell-padding">Group</th>
+						</tr>
+
+						@foreach (var leader in Model.Leaders)
+						{
+							<tr>
+
+								<td class="table-cell-padding">@leader.Id</td>
+								<td class="table-cell-padding">@leader.FirstName @leader.LastName</td>
+								<td class="table-cell-padding">@leader.Email</td>
+								<td class="table-cell-padding">@leader.PhoneNumber</td>
+								<td class="table-cell-padding">@leader.Gender</td>
+								<td class="table-cell-padding">@leader.IsActive</td>
+								<td class="table-cell-padding">@leader.IsVerified</td>
+
+
+								@if (leader.RoleId == 2)
+								{
+									<td class="table-cell-padding">Leader</td>
+								}
+								else if (leader.RoleId == 3)
+								{
+									<td class="table-cell-padding">Admin</td>
+								}
+								else
+								{
+									<td class="table-cell-padding">Error</td>
+								}
+
+								<td>@leader.GroupId</td>
+
+								<td><input type="submit" class="btn rounded-2 p-2 m-1 shadow fw-bold text-white" style="background-color: darkorange;" value="Edit Leader"></td>
+
+							</tr>
+						}
+					</table>
+				</div>
+			</div>
+			
+			
+			@if (Model.StudentsWaiting!= null && Model.StudentsWaiting.Any())
+			{
+				<div class="row">
+					<div class="container-fluid rounded-4 bg-white shadow-lg text-center my-4 mx-3" style="margin:0px;">
+						<h1 class="my-5">Students Waiting</h1>
+						<table style="width:100%;">
+							<tr>
+								<th class="table-cell-padding">Id</th>
+								<th class="table-cell-padding">Name</th>
+								<th class="table-cell-padding">Email</th>
+								<th class="table-cell-padding">Phone-Number</th>
+								<th class="table-cell-padding">Gender</th>
+								<th class="table-cell-padding">Grade</th>
+								<th class="table-cell-padding">Verified</th>
+								<th class="table-cell-padding">Role</th>
+								<th class="table-cell-padding">Group</th>
+							</tr>
+
+							@foreach (var student in Model.StudentsWaiting)
+							{
+								<form id="VerifyUserForm" asp-controller="Admin" asp-action="VerifyUser" method="post">
+								<tr>
+
+									<td class="table-cell-padding"><input class="text-center border-0" type="text" asp-for="SelectedUserId" value="@student.Id" style="width:80px; padding:0px;" readonly></td>
+									<td class="table-cell-padding">@student.FirstName @student.LastName</td>
+									<td class="table-cell-padding">@student.Email</td>
+									<td class="table-cell-padding">@student.PhoneNumber</td>
+									<td class="table-cell-padding">@student.Gender</td>
+									<td class="table-cell-padding">@student.Grade</td>
+									<td class="table-cell-padding">@student.IsVerified</td>
+
+
+									@if (student.RoleId == 1)
+									{
+										<td class="table-cell-padding">Student</td>
+									}
+									else
+									{
+										<td class="table-cell-padding">Error</td>
+									}
+
+									<td class="px-3">
+										<select asp-for="SelectedUserGroupId" class="form-select" aria-label="Default select example" required>
+											<option selected>Assign to a group</option>
+											<option value="1">Middle School Girls</option>
+											<option value="2">High School Girls</option>
+											<option value="3">Middle School Boys</option>
+											<option value="4">High School Boys</option>
+										</select>
+									</td>
+
+									<td><button type="submit" class="btn rounded-2 p-2 m-1 shadow fw-bold text-white" style="background-color: darkorange;">Verify Student</button></td>
+
+								</tr>
+								</form>
+							}
+						</table>
+					</div>
+				</div>
+				
+			}
+			
+
+			@if (Model.LeadersWaiting != null && Model.LeadersWaiting.Any())
+			{
+				<div class="row">
+					<div class="container-fluid rounded-4 bg-white shadow-lg text-center my-4 mx-3" style="margin:0px;">
+						<h1 class="my-5">Leaders Waiting</h1>
+						<table style="width:100%;">
+							<tr>
+								<th class="table-cell-padding">Id</th>
+								<th class="table-cell-padding">Name</th>
+								<th class="table-cell-padding">Email</th>
+								<th class="table-cell-padding">Phone-Number</th>
+								<th class="table-cell-padding">Gender</th>
+								<th class="table-cell-padding">Active</th>
+								<th class="table-cell-padding">Verified</th>
+								<th class="table-cell-padding">Role</th>
+								<th class="table-cell-padding">Group</th>
+							</tr>
+
+							@foreach (var leader in Model.LeadersWaiting)
+							{
+								<form id="VerifyUserForm" asp-controller="Admin" asp-action="VerifyUser" method="post">
+								<tr>
+
+									<td class="table-cell-padding"><input class="text-center border-0" type="text" asp-for="SelectedUserId" value="@leader.Id" style="width:80px; padding:0px;" readonly></td>
+									<td class="table-cell-padding">@leader.FirstName @leader.LastName</td>
+									<td class="table-cell-padding">@leader.Email</td>
+									<td class="table-cell-padding">@leader.PhoneNumber</td>
+									<td class="table-cell-padding">@leader.Gender</td>
+									<td class="table-cell-padding">@leader.IsActive</td>
+									<td class="table-cell-padding">@leader.IsVerified</td>
+
+
+										@if (leader.RoleId == 2)
+										{
+										<td class="table-cell-padding">Leader</td>
+										}
+										else
+										{
+										<td class="table-cell-padding">Error</td>
+										}
+
+									<td class="px-3">
+										<select asp-for="SelectedUserGroupId" class="form-select" aria-label="Default select example" required>
+											<option selected>Assign to a group</option>
+											<option value="1">Middle School Girls</option>
+											<option value="2">High School Girls</option>
+											<option value="3">Middle School Boys</option>
+											<option value="4">High School Boys</option>
+										</select>
+									</td>
+
+									<td><button type="submit" class="btn rounded-2 p-2 m-1 shadow fw-bold text-white" style="background-color: darkorange;" >Verify Leader</button></td>
+
+								</tr>
+								</form>
+							}
+						</table>
+					</div>
+				</div>
+				
+			}
+			
+
+		</div>
+
+	</div>
+</div>
+
+@if (Model.SelectedUserId != 0)
+{
+		
+	<div class="toast-container position-fixed bottom-0 end-0 p-3">
+		<div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+			<div class="toast-header">
+				<img src="..." class="rounded me-2" alt="...">
+				<strong class="me-auto">JourneyGen</strong>
+				<small>1 min ago</small>
+				<button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+			</div>
+			<div class="toast-body">
+				User has been verified!
+			</div>
+		</div>
+	</div>
+
+
+	<script>
+		document.addEventListener('DOMContentLoaded', function () {
+			var toastEl = document.getElementById('liveToast');
+			var toast = new bootstrap.Toast(toastEl);
+			toast.show();
+		});
+	</script>
+
+}

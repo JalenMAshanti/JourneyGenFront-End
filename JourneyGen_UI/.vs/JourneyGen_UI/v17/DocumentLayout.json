@@ -1,0 +1,431 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\SoftwareDevelopmentHub\\Projects\\JourneyGen\\Frontend\\JourneyGen_UI\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3E70F4C3-02E5-4897-BD6B-D6B90110ED37}|JourneyGen_UI.csproj|e:\\softwaredevelopmenthub\\projects\\journeygen\\frontend\\journeygen_ui\\controllers\\bibleindexcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3E70F4C3-02E5-4897-BD6B-D6B90110ED37}|JourneyGen_UI.csproj|solutionrelative:controllers\\bibleindexcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E70F4C3-02E5-4897-BD6B-D6B90110ED37}|JourneyGen_UI.csproj|e:\\softwaredevelopmenthub\\projects\\journeygen\\frontend\\journeygen_ui\\controllers\\registercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3E70F4C3-02E5-4897-BD6B-D6B90110ED37}|JourneyGen_UI.csproj|solutionrelative:controllers\\registercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E70F4C3-02E5-4897-BD6B-D6B90110ED37}|JourneyGen_UI.csproj|e:\\softwaredevelopmenthub\\projects\\journeygen\\frontend\\journeygen_ui\\models\\messagesviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3E70F4C3-02E5-4897-BD6B-D6B90110ED37}|JourneyGen_UI.csproj|solutionrelative:models\\messagesviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E70F4C3-02E5-4897-BD6B-D6B90110ED37}|JourneyGen_UI.csproj|e:\\softwaredevelopmenthub\\projects\\journeygen\\frontend\\journeygen_ui\\models\\adminviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3E70F4C3-02E5-4897-BD6B-D6B90110ED37}|JourneyGen_UI.csproj|solutionrelative:models\\adminviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E70F4C3-02E5-4897-BD6B-D6B90110ED37}|JourneyGen_UI.csproj|e:\\softwaredevelopmenthub\\projects\\journeygen\\frontend\\journeygen_ui\\views\\home\\dashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3E70F4C3-02E5-4897-BD6B-D6B90110ED37}|JourneyGen_UI.csproj|solutionrelative:views\\home\\dashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{37DC3F4C-9B64-4CE5-B9FC-0FB4F80B3498}|..\\Logic\\Logic.csproj|e:\\softwaredevelopmenthub\\projects\\journeygen\\frontend\\logic\\repositories\\biblerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{37DC3F4C-9B64-4CE5-B9FC-0FB4F80B3498}|..\\Logic\\Logic.csproj|e:\\softwaredevelopmenthub\\projects\\journeygen\\frontend\\logic\\models\\verseoftheday.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{37DC3F4C-9B64-4CE5-B9FC-0FB4F80B3498}|..\\Logic\\Logic.csproj|e:\\softwaredevelopmenthub\\projects\\journeygen\\frontend\\logic\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{37DC3F4C-9B64-4CE5-B9FC-0FB4F80B3498}|..\\Logic\\Logic.csproj|e:\\softwaredevelopmenthub\\projects\\journeygen\\frontend\\logic\\models\\prexelimage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{37DC3F4C-9B64-4CE5-B9FC-0FB4F80B3498}|..\\Logic\\Logic.csproj|e:\\softwaredevelopmenthub\\projects\\journeygen\\frontend\\logic\\models\\message.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{37DC3F4C-9B64-4CE5-B9FC-0FB4F80B3498}|..\\Logic\\Logic.csproj|e:\\softwaredevelopmenthub\\projects\\journeygen\\frontend\\logic\\models\\biblebook.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{37DC3F4C-9B64-4CE5-B9FC-0FB4F80B3498}|..\\Logic\\Logic.csproj|e:\\softwaredevelopmenthub\\projects\\journeygen\\frontend\\logic\\models\\requestmodels\\loginrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{37DC3F4C-9B64-4CE5-B9FC-0FB4F80B3498}|..\\Logic\\Logic.csproj|e:\\softwaredevelopmenthub\\projects\\journeygen\\frontend\\logic\\mappers\\message_mapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{37DC3F4C-9B64-4CE5-B9FC-0FB4F80B3498}|..\\Logic\\Logic.csproj|e:\\softwaredevelopmenthub\\projects\\journeygen\\frontend\\logic\\mappers\\chapter_mapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{37DC3F4C-9B64-4CE5-B9FC-0FB4F80B3498}|..\\Logic\\Logic.csproj|e:\\softwaredevelopmenthub\\projects\\journeygen\\frontend\\logic\\helpers\\stringformattinghelpers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{37DC3F4C-9B64-4CE5-B9FC-0FB4F80B3498}|..\\Logic\\Logic.csproj|e:\\softwaredevelopmenthub\\projects\\journeygen\\frontend\\logic\\helpers\\emailselector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{37DC3F4C-9B64-4CE5-B9FC-0FB4F80B3498}|..\\Logic\\Logic.csproj|e:\\softwaredevelopmenthub\\projects\\journeygen\\frontend\\logic\\factories\\clientfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{37DC3F4C-9B64-4CE5-B9FC-0FB4F80B3498}|..\\Logic\\Logic.csproj|e:\\softwaredevelopmenthub\\projects\\journeygen\\frontend\\logic\\cookies\\userdata\\usercookies.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{37DC3F4C-9B64-4CE5-B9FC-0FB4F80B3498}|..\\Logic\\Logic.csproj|e:\\softwaredevelopmenthub\\projects\\journeygen\\frontend\\logic\\api\\externalapiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{37DC3F4C-9B64-4CE5-B9FC-0FB4F80B3498}|..\\Logic\\Logic.csproj|e:\\softwaredevelopmenthub\\projects\\journeygen\\frontend\\logic\\api\\apiresponses\\userbygroupidapiresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{37DC3F4C-9B64-4CE5-B9FC-0FB4F80B3498}|..\\Logic\\Logic.csproj|e:\\softwaredevelopmenthub\\projects\\journeygen\\frontend\\logic\\api\\apiresponses\\chaptertextapiresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{37DC3F4C-9B64-4CE5-B9FC-0FB4F80B3498}|..\\Logic\\Logic.csproj|e:\\softwaredevelopmenthub\\projects\\journeygen\\frontend\\logic\\api\\apiresponses\\loginapiresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{37DC3F4C-9B64-4CE5-B9FC-0FB4F80B3498}|..\\Logic\\Logic.csproj|e:\\softwaredevelopmenthub\\projects\\journeygen\\frontend\\logic\\api\\abstractions\\apiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{37DC3F4C-9B64-4CE5-B9FC-0FB4F80B3498}|..\\Logic\\Logic.csproj|e:\\softwaredevelopmenthub\\projects\\journeygen\\frontend\\logic\\api\\abstractions\\iapirequestinterface.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "BibleIndexController.cs",
+              "DocumentMoniker": "E:\\SoftwareDevelopmentHub\\Projects\\JourneyGen\\Frontend\\JourneyGen_UI\\Controllers\\BibleIndexController.cs",
+              "RelativeDocumentMoniker": "Controllers\\BibleIndexController.cs",
+              "ToolTip": "E:\\SoftwareDevelopmentHub\\Projects\\JourneyGen\\Frontend\\JourneyGen_UI\\Controllers\\BibleIndexController.cs",
+              "RelativeToolTip": "Controllers\\BibleIndexController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-19T23:24:11.238Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "RegisterController.cs",
+              "DocumentMoniker": "E:\\SoftwareDevelopmentHub\\Projects\\JourneyGen\\Frontend\\JourneyGen_UI\\Controllers\\RegisterController.cs",
+              "RelativeDocumentMoniker": "Controllers\\RegisterController.cs",
+              "ToolTip": "E:\\SoftwareDevelopmentHub\\Projects\\JourneyGen\\Frontend\\JourneyGen_UI\\Controllers\\RegisterController.cs",
+              "RelativeToolTip": "Controllers\\RegisterController.cs",
+              "ViewState": "AQIAAB0AAAAAAAAAAAAwwC4AAAA9AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-19T23:21:00.417Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MessagesViewModel.cs",
+              "DocumentMoniker": "E:\\SoftwareDevelopmentHub\\Projects\\JourneyGen\\Frontend\\JourneyGen_UI\\Models\\MessagesViewModel.cs",
+              "RelativeDocumentMoniker": "Models\\MessagesViewModel.cs",
+              "ToolTip": "E:\\SoftwareDevelopmentHub\\Projects\\JourneyGen\\Frontend\\JourneyGen_UI\\Models\\MessagesViewModel.cs",
+              "RelativeToolTip": "Models\\MessagesViewModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-19T23:20:25.402Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AdminViewModel.cs",
+              "DocumentMoniker": "E:\\SoftwareDevelopmentHub\\Projects\\JourneyGen\\Frontend\\JourneyGen_UI\\Models\\AdminViewModel.cs",
+              "RelativeDocumentMoniker": "Models\\AdminViewModel.cs",
+              "ToolTip": "E:\\SoftwareDevelopmentHub\\Projects\\JourneyGen\\Frontend\\JourneyGen_UI\\Models\\AdminViewModel.cs",
+              "RelativeToolTip": "Models\\AdminViewModel.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-19T23:20:01.451Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Dashboard.cshtml",
+              "DocumentMoniker": "E:\\SoftwareDevelopmentHub\\Projects\\JourneyGen\\Frontend\\JourneyGen_UI\\Views\\Home\\Dashboard.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Dashboard.cshtml",
+              "ToolTip": "E:\\SoftwareDevelopmentHub\\Projects\\JourneyGen\\Frontend\\JourneyGen_UI\\Views\\Home\\Dashboard.cshtml",
+              "RelativeToolTip": "Views\\Home\\Dashboard.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-19T23:19:28.831Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "BibleRepository.cs",
+              "DocumentMoniker": "E:\\SoftwareDevelopmentHub\\Projects\\JourneyGen\\Frontend\\Logic\\Repositories\\BibleRepository.cs",
+              "RelativeDocumentMoniker": "..\\Logic\\Repositories\\BibleRepository.cs",
+              "ToolTip": "E:\\SoftwareDevelopmentHub\\Projects\\JourneyGen\\Frontend\\Logic\\Repositories\\BibleRepository.cs",
+              "RelativeToolTip": "..\\Logic\\Repositories\\BibleRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-19T22:11:36.637Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "VerseOfTheDay.cs",
+              "DocumentMoniker": "E:\\SoftwareDevelopmentHub\\Projects\\JourneyGen\\Frontend\\Logic\\Models\\VerseOfTheDay.cs",
+              "RelativeDocumentMoniker": "..\\Logic\\Models\\VerseOfTheDay.cs",
+              "ToolTip": "E:\\SoftwareDevelopmentHub\\Projects\\JourneyGen\\Frontend\\Logic\\Models\\VerseOfTheDay.cs",
+              "RelativeToolTip": "..\\Logic\\Models\\VerseOfTheDay.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-19T22:11:28.131Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "User.cs",
+              "DocumentMoniker": "E:\\SoftwareDevelopmentHub\\Projects\\JourneyGen\\Frontend\\Logic\\Models\\User.cs",
+              "RelativeDocumentMoniker": "..\\Logic\\Models\\User.cs",
+              "ToolTip": "E:\\SoftwareDevelopmentHub\\Projects\\JourneyGen\\Frontend\\Logic\\Models\\User.cs",
+              "RelativeToolTip": "..\\Logic\\Models\\User.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-19T22:11:24.883Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "PrexelImage.cs",
+              "DocumentMoniker": "E:\\SoftwareDevelopmentHub\\Projects\\JourneyGen\\Frontend\\Logic\\Models\\PrexelImage.cs",
+              "RelativeDocumentMoniker": "..\\Logic\\Models\\PrexelImage.cs",
+              "ToolTip": "E:\\SoftwareDevelopmentHub\\Projects\\JourneyGen\\Frontend\\Logic\\Models\\PrexelImage.cs",
+              "RelativeToolTip": "..\\Logic\\Models\\PrexelImage.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-19T22:11:22.438Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Message.cs",
+              "DocumentMoniker": "E:\\SoftwareDevelopmentHub\\Projects\\JourneyGen\\Frontend\\Logic\\Models\\Message.cs",
+              "RelativeDocumentMoniker": "..\\Logic\\Models\\Message.cs",
+              "ToolTip": "E:\\SoftwareDevelopmentHub\\Projects\\JourneyGen\\Frontend\\Logic\\Models\\Message.cs",
+              "RelativeToolTip": "..\\Logic\\Models\\Message.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-19T22:11:19.474Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "BibleBook.cs",
+              "DocumentMoniker": "E:\\SoftwareDevelopmentHub\\Projects\\JourneyGen\\Frontend\\Logic\\Models\\BibleBook.cs",
+              "RelativeDocumentMoniker": "..\\Logic\\Models\\BibleBook.cs",
+              "ToolTip": "E:\\SoftwareDevelopmentHub\\Projects\\JourneyGen\\Frontend\\Logic\\Models\\BibleBook.cs",
+              "RelativeToolTip": "..\\Logic\\Models\\BibleBook.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-19T22:11:12.155Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "LoginRequest.cs",
+              "DocumentMoniker": "E:\\SoftwareDevelopmentHub\\Projects\\JourneyGen\\Frontend\\Logic\\Models\\RequestModels\\LoginRequest.cs",
+              "RelativeDocumentMoniker": "..\\Logic\\Models\\RequestModels\\LoginRequest.cs",
+              "ToolTip": "E:\\SoftwareDevelopmentHub\\Projects\\JourneyGen\\Frontend\\Logic\\Models\\RequestModels\\LoginRequest.cs",
+              "RelativeToolTip": "..\\Logic\\Models\\RequestModels\\LoginRequest.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-19T22:11:06.245Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Message_Mapper.cs",
+              "DocumentMoniker": "E:\\SoftwareDevelopmentHub\\Projects\\JourneyGen\\Frontend\\Logic\\Mappers\\Message_Mapper.cs",
+              "RelativeDocumentMoniker": "..\\Logic\\Mappers\\Message_Mapper.cs",
+              "ToolTip": "E:\\SoftwareDevelopmentHub\\Projects\\JourneyGen\\Frontend\\Logic\\Mappers\\Message_Mapper.cs",
+              "RelativeToolTip": "..\\Logic\\Mappers\\Message_Mapper.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-19T22:10:59.139Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Chapter_Mapper.cs",
+              "DocumentMoniker": "E:\\SoftwareDevelopmentHub\\Projects\\JourneyGen\\Frontend\\Logic\\Mappers\\Chapter_Mapper.cs",
+              "RelativeDocumentMoniker": "..\\Logic\\Mappers\\Chapter_Mapper.cs",
+              "ToolTip": "E:\\SoftwareDevelopmentHub\\Projects\\JourneyGen\\Frontend\\Logic\\Mappers\\Chapter_Mapper.cs",
+              "RelativeToolTip": "..\\Logic\\Mappers\\Chapter_Mapper.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-19T22:10:26.313Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "StringFormattingHelpers.cs",
+              "DocumentMoniker": "E:\\SoftwareDevelopmentHub\\Projects\\JourneyGen\\Frontend\\Logic\\Helpers\\StringFormattingHelpers.cs",
+              "RelativeDocumentMoniker": "..\\Logic\\Helpers\\StringFormattingHelpers.cs",
+              "ToolTip": "E:\\SoftwareDevelopmentHub\\Projects\\JourneyGen\\Frontend\\Logic\\Helpers\\StringFormattingHelpers.cs",
+              "RelativeToolTip": "..\\Logic\\Helpers\\StringFormattingHelpers.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAABRAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-19T22:09:56.603Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "EmailSelector.cs",
+              "DocumentMoniker": "E:\\SoftwareDevelopmentHub\\Projects\\JourneyGen\\Frontend\\Logic\\Helpers\\EmailSelector.cs",
+              "RelativeDocumentMoniker": "..\\Logic\\Helpers\\EmailSelector.cs",
+              "ToolTip": "E:\\SoftwareDevelopmentHub\\Projects\\JourneyGen\\Frontend\\Logic\\Helpers\\EmailSelector.cs",
+              "RelativeToolTip": "..\\Logic\\Helpers\\EmailSelector.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-19T22:09:14.978Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "ClientFactory.cs",
+              "DocumentMoniker": "E:\\SoftwareDevelopmentHub\\Projects\\JourneyGen\\Frontend\\Logic\\Factories\\ClientFactory.cs",
+              "RelativeDocumentMoniker": "..\\Logic\\Factories\\ClientFactory.cs",
+              "ToolTip": "E:\\SoftwareDevelopmentHub\\Projects\\JourneyGen\\Frontend\\Logic\\Factories\\ClientFactory.cs",
+              "RelativeToolTip": "..\\Logic\\Factories\\ClientFactory.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-19T22:08:43.532Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "UserCookies.cs",
+              "DocumentMoniker": "E:\\SoftwareDevelopmentHub\\Projects\\JourneyGen\\Frontend\\Logic\\Cookies\\UserData\\UserCookies.cs",
+              "RelativeDocumentMoniker": "..\\Logic\\Cookies\\UserData\\UserCookies.cs",
+              "ToolTip": "E:\\SoftwareDevelopmentHub\\Projects\\JourneyGen\\Frontend\\Logic\\Cookies\\UserData\\UserCookies.cs",
+              "RelativeToolTip": "..\\Logic\\Cookies\\UserData\\UserCookies.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-19T22:08:14.801Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "ExternalApiService.cs",
+              "DocumentMoniker": "E:\\SoftwareDevelopmentHub\\Projects\\JourneyGen\\Frontend\\Logic\\API\\ExternalApiService.cs",
+              "RelativeDocumentMoniker": "..\\Logic\\API\\ExternalApiService.cs",
+              "ToolTip": "E:\\SoftwareDevelopmentHub\\Projects\\JourneyGen\\Frontend\\Logic\\API\\ExternalApiService.cs",
+              "RelativeToolTip": "..\\Logic\\API\\ExternalApiService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-19T22:07:47.057Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "UserByGroupIdAPIResponse.cs",
+              "DocumentMoniker": "E:\\SoftwareDevelopmentHub\\Projects\\JourneyGen\\Frontend\\Logic\\API\\ApiResponses\\UserByGroupIdAPIResponse.cs",
+              "RelativeDocumentMoniker": "..\\Logic\\API\\ApiResponses\\UserByGroupIdAPIResponse.cs",
+              "ToolTip": "E:\\SoftwareDevelopmentHub\\Projects\\JourneyGen\\Frontend\\Logic\\API\\ApiResponses\\UserByGroupIdAPIResponse.cs",
+              "RelativeToolTip": "..\\Logic\\API\\ApiResponses\\UserByGroupIdAPIResponse.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-19T22:07:34.549Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "ChapterTextAPIResponse.cs",
+              "DocumentMoniker": "E:\\SoftwareDevelopmentHub\\Projects\\JourneyGen\\Frontend\\Logic\\API\\ApiResponses\\ChapterTextAPIResponse.cs",
+              "RelativeDocumentMoniker": "..\\Logic\\API\\ApiResponses\\ChapterTextAPIResponse.cs",
+              "ToolTip": "E:\\SoftwareDevelopmentHub\\Projects\\JourneyGen\\Frontend\\Logic\\API\\ApiResponses\\ChapterTextAPIResponse.cs",
+              "RelativeToolTip": "..\\Logic\\API\\ApiResponses\\ChapterTextAPIResponse.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-19T22:07:31.769Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "LoginApiResponse.cs",
+              "DocumentMoniker": "E:\\SoftwareDevelopmentHub\\Projects\\JourneyGen\\Frontend\\Logic\\API\\ApiResponses\\LoginApiResponse.cs",
+              "RelativeDocumentMoniker": "..\\Logic\\API\\ApiResponses\\LoginApiResponse.cs",
+              "ToolTip": "E:\\SoftwareDevelopmentHub\\Projects\\JourneyGen\\Frontend\\Logic\\API\\ApiResponses\\LoginApiResponse.cs",
+              "RelativeToolTip": "..\\Logic\\API\\ApiResponses\\LoginApiResponse.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAA5wAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-19T22:06:57.621Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "IAPIRequestInterface.cs",
+              "DocumentMoniker": "E:\\SoftwareDevelopmentHub\\Projects\\JourneyGen\\Frontend\\Logic\\API\\Abstractions\\IAPIRequestInterface.cs",
+              "RelativeDocumentMoniker": "..\\Logic\\API\\Abstractions\\IAPIRequestInterface.cs",
+              "ToolTip": "E:\\SoftwareDevelopmentHub\\Projects\\JourneyGen\\Frontend\\Logic\\API\\Abstractions\\IAPIRequestInterface.cs",
+              "RelativeToolTip": "..\\Logic\\API\\Abstractions\\IAPIRequestInterface.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-19T22:06:29.211Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "APIService.cs",
+              "DocumentMoniker": "E:\\SoftwareDevelopmentHub\\Projects\\JourneyGen\\Frontend\\Logic\\API\\Abstractions\\APIService.cs",
+              "RelativeDocumentMoniker": "..\\Logic\\API\\Abstractions\\APIService.cs",
+              "ToolTip": "E:\\SoftwareDevelopmentHub\\Projects\\JourneyGen\\Frontend\\Logic\\API\\Abstractions\\APIService.cs",
+              "RelativeToolTip": "..\\Logic\\API\\Abstractions\\APIService.cs",
+              "ViewState": "AQIAAEcAAAAAAAAAAAA8wAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-19T22:06:28.172Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 1578,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,182 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+
+
+.full-height {
+    height: 100vh;
+}
+
+.fit-div {
+    width: 95%; 
+    height: 25vh; 
+    overflow: hidden; 
+    position: relative;
+}
+
+
+.fit-div-custom {
+    overflow: hidden; 
+    position: relative;
+}
+
+.fit-div img {
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+}
+
+.fit-div-custom img {
+    width: 170%; 
+    height: 100%; 
+    object-fit: cover; 
+    padding: 0;
+    margin: 0;
+}
+
+.overflow-hidden{
+
+    overflow: hidden;
+}
+
+.overlay-text-index {
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    width: 85%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    background-color: none; 
+}
+
+.overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 85%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    background-color: none; 
+}
+
+.overlay-sub {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: 4px;
+    transform: translate(-50%, 350%);
+    color: white;
+    text-align: center;
+    background-color: none; 
+}
+
+
+
+
+
+.responsive-text {
+    font-size: 1rem;
+}
+
+@media (min-width: 576px) {
+    .responsive-text {
+        font-size: 1.25rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .responsive-text {
+        font-size: 1.5rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .responsive-text {
+        font-size: 1.75rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .responsive-text {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hide-on-small {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .hide-md {
+        display: none !important;
+    }
+}
+
+    .my-container {
+        margin: 0px;
+        padding: 0px;
+    }
+
+
+    .fixed {
+        position: fixed;
+    }
+
+.table-cell-padding {
+    margin-left: 4%;
+    margin-right:4%;
+}
+
+.floating-text-box {
+    position: fixed;
+    bottom: 7vh;
+    width: 50%; /* Adjust based on your design */
+    background-color: #fff;
+    padding: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    z-index: 1000;
+    max-height: 40vh; /* Max height to prevent excessive growth */
+    overflow-y: auto; /* Enable scrolling when max height is reached */
+}
+
+.form-control {
+    resize: none; /* Prevent manual resizing */
+    height: auto; /* Allow the height to grow with content */
+    overflow: hidden; /* Hide scrollbars inside the input */
+}
+
+.scrollable-container {
+    height: 100vh; /* Set the desired height */
+    padding-top: 5vh;
+    padding-left: 5vh;
+    padding-right: 5vh;
+    padding-bottom: 25vh;
+    overflow-y: auto; /* Enables vertical scrolling */
+    scrollbar-width: none; /* For Firefox */
+    -ms-overflow-style: none; /* For Internet Explorer and Edge */
+}
+
+ .scrollable-container::-webkit-scrollbar {
+        display: none; /* For Chrome, Safari, and other WebKit browsers */
+ }

@@ -1,0 +1,29 @@
+﻿@model LoginViewModel
+
+<div class="my-container" style="height:100vh;">
+    <div class="row">
+        <div class="col">
+            <div class="container-fluid  d-flex justify-content-center align-items-center" style="height: 100vh;">
+                <form class="container bg- p-5 rounded-5 text-center shadow-lg" style="width: auto" method="post" asp-controller="Home" asp-action="LoginUser">
+                    <h1 class="fw-bold text-secondary">Login</h1>
+                    <input  asp-for="request.Email" class="d-block rounded-pill m-4 p-2 fw-bold" type="text" placeholder="Email" style="border-style: solid; width: 30vh;" value="jalenmshaw@gmail.com">
+                    <input  asp-for="request.Password"class="d-block rounded-pill m-4 p-2 fw-bold" type="password" placeholder="Password" style="border-style: solid; width: 30vh;" value="Test@123">
+                    <a class="text-secondary" asp-controller="Register" asp-action="Register"> Dont have an account register here</a>
+                    <button type="submit" class="d-block shadow-lg rounded-pill m-4 p-2 text-white fw-bold fs-4" style="border-style: none; width: 30vh; background-color:darkorange;">Submit</button>
+                    <p>@Model.error</p>
+
+                </form>
+            </div>
+        </div>
+        <div class="col hide-on-small">
+            <div class="container-fluid rounded-start-5 shadow-lg d-flex align-items-center overflow-hidden" style="height: 100vh; background-color:darkorange;">
+                <div class="container  justify-content-center text-center fit-div-custom" style="width: 100%;">
+                    <h1 class="fw-bold text-white overlay-text-index mt-5" style="font-size: 400%;">Welcome to JourneyGen,</h1>
+                    @* <h1 class="fw-bold text-white ps-5 mt-5 ms-5 overlay-text" style="font-size: 300%;">Where every Journey Matters</h1> *@
+                    <img class="" src="~/images/LoginCharacter.png">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

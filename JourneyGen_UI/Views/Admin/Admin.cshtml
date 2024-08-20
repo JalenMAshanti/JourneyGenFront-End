@@ -1,0 +1,238 @@
+﻿@model AdminViewModel
+
+
+<div>
+    <div class="container-fluid ">
+        <div class="row">
+
+
+
+            <div class="col-2 col-lg-3 col-xl-1 bg-white shadow-lg" style="width: 25vh;">
+                <img src="~/images/Jounrey_Gen_Logo_WithText.png" alt="logo" class="p-3 my-2" style="object-fit:contain; display:inline-block; height:auto; width:100%;">
+
+                    <div class="container align-items-center me-3">
+
+
+                        <a class="btn btn-warning btn-large d-block my-4 fw-bold text-light fs-5 shadow-lg" style="background-color:darkorange;" asp-controller="Home" asp-action="GroupBoard">Post to Group</a>
+
+                        <a class="btn btn-transparent btn-large d-block fw-bold fs-5 mb-3" style="color:darkorange;" asp-controller="Home" asp-action="ReturnHome">Home</a>
+
+                        <a class="btn btn-transparent btn-large d-block fw-bold text-secondary fs-5 mb-3" asp-controller="Home" asp-action="GroupBoard">Group</a>
+
+                        <a class="btn btn-transparent btn-large d-block fw-bold text-secondary fs-5 mb-3" asp-controller="BibleIndex" asp-action="BibleIndex">Bible</a>
+
+                        <a class="btn btn-transparent btn-large d-block fw-bold text-secondary fs-5 mb-3">Resources</a>
+
+                        <a class="btn btn-transparent btn-large d-block fw-bold text-secondary fs-5 mb-3" asp-controller="Admin" asp-action="InitAdmin">Admin</a>
+
+                        <a class="btn btn-transparent btn-large d-block fw-bold text-secondary fs-5 mb-3 mt-5">Settings</a>
+
+                    </div>
+
+                    <img src="~/images/JourneyGenMobile_Promo.jpg" alt="promo" style="width: 100%; height: 36vh; object-fit:cover;" class="rounded-4 shadow-lg mt-1">
+
+            </div>
+
+
+
+            <div class="col bg-light">
+                <div class="container p-1 ">
+
+                    <div class="row mt-4">
+                        <div class="col">
+                            <h1 class="fw-bold d-inline text-secondary"> Welcome Back, <b class="d-inline fw-bold" style="color: darkorange;">@Model.FirstName</b></h1>
+                        </div>
+                    </div>
+
+                    <div class="row mt-5 d-flex justify-content-start">
+
+                        <div class="col-lg-auto col-auto col-sm-12">
+                            <div class="container mt-2 p-4 bg-white rounded-4 shadow-lg">
+                                <h4 class="text-secondary fw-bold fs-5">Middle School Girls</h4>
+                                <h4 class="d-inline fw-bold fs-4 text-secondary">| @Model.MiddleSchoolGirlsCount</h4>
+                                <h4 class="d-inline fs-6 text-secondary">Members</h4>
+
+                            </div>
+                        </div>
+
+                        <div class="col-lg-auto col-auto col-sm-12">
+                            <div class="container mt-2 p-4 bg-white rounded-4 shadow-lg">
+                                <h4 class="text-secondary fw-bold fs-5">High School Girls</h4>
+                                <h4 class="d-inline fw-bold fs-4 text-secondary">| @Model.HighSchoolGirlsCount</h4>
+                                <h4 class="d-inline fs-6 text-secondary">Members</h4>
+
+                            </div>
+                        </div>
+
+                        <div class=" col-lg-auto col-auto col-sm-12">
+                            <div class="container mt-2 p-4 bg-white rounded-4 shadow-lg">
+                                <h4 class="text-secondary fw-bold fs-5">Middle School Boys</h4>
+                                <h4 class="d-inline fw-bold fs-4 text-secondary">| @Model.HighSchoolBoysCount</h4>
+                                <h4 class="d-inline fs-6 text-secondary">Members</h4>
+
+                            </div>
+                        </div>
+
+                        <div class="col-lg-auto col-auto col-sm-12">
+                            <div class="container  mt-2 p-4 bg-white rounded-4 shadow-lg">
+                                <h4 class="text-secondary fw-bold fs-5">High School Boys</h4>
+                                <h4 class="d-inline fw-bold fs-4 text-secondary">| @Model.HighSchoolBoysCount</h4>
+                                <h4 class="d-inline fs-6 text-secondary">Members</h4>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row ">
+                        <div class="container">
+                            <h2 class="text-secondary p-2 fw-bold mt-4 fs-2">Waiting List</h2>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="container">
+                            <div class="row d-flex justify-content-start ">
+                                <div class="col-lg-auto col-8 mt-2 col-sm-12">
+                                    <div class="container bg-white p-3 shadow-lg rounded-4" style="width: 100%; height:100%;">
+                                        <div class="row">
+                                            <div class="col col m-1">
+                                                <div class="container p-3 rounded-4 shadow-sm text-center" style="background-color: darkorange">
+                                                    <div class="row">
+                                                        <h3 class="text-white" style="white-space: nowrap;">Students Waiting</h3>
+                                                    </div>
+                                                    <div class="row">
+                                                        <h1 class="text-white fw-bold">@Model.StudentsWaiting.Count()</h1>
+                                                    </div>
+                                                    <div class="row">
+                                                        <a class="fw-bold text-white" href="#">View All</a>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                            <div class="col m-1">
+                                                <div class="container p-3 rounded-4 shadow-sm text-center" style="background-color: darkorange; height: 100%;">
+                                                    <div class="row">
+                                                        <h3 class="text-white" style="white-space: nowrap;">Leaders  Waiting</h3>
+                                                    </div>
+                                                    <div class="row">
+                                                        <h1 class="text-white fw-bold">@Model.LeadersWaiting.Count()</h1>
+                                                    </div>
+                                                    <div class="row">
+                                                        <a class="fw-bold text-white" href="#" style="">View All</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-auto col-12 col-sm-12 mt-3">
+                                    <div class="container bg-white p-3 shadow-lg rounded-4" style="height:100%; width:100%;">
+                                        <div class="row">
+                                            <h4 class="fw-bold text-secondary mb-2">Email Group</h4>
+                                        </div>
+                                        <div class="row px-3">
+                                            <select class="form-select fw-bold text-secondary" aria-label="Default select example">
+                                                <option selected>Choose Recipients</option>
+                                                <option value="1">Leaders</option>
+                                                <option value="2">Students</option>
+                                                <option value="3">Middle School Girls</option>
+                                                <option value="3">Middle School Boys</option>
+                                                <option value="3">High School Girls</option>
+                                                <option value="3">High School Boys</option>
+                                            </select>
+
+                                        </div>
+                                        <div class="row p-3">
+                                            <button class="fw-bold text-white border border-0 rounded-4 p-2 shadow" style="background-color: darkorange;"> Create Email</button>
+
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+
+            <div class="col-3 bg-light hide-on-small" style="width:30vh;">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col py-4">
+                            <div class="container-fluid d-flex justify-content-end">
+                                <img src="~/images/NoProfilePic.png" alt="profilephoto" class="d-inline mx-4 rounded-3" style="height: 6vh; width: 6vh; object-fit: cover;">
+                                <h1 class="fs-5 d-inline mt-3 text-nowrap responsive-text">@Model.FirstName @Model.LastName</h1>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+
+                        <div class="accordion accordion-flush" id="accordionFlushExample">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed fw-bold text-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="true" aria-controls="flush-collapseOne">
+                                        Admins
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                    <div class="accordion-body">
+                                        <div class="container">
+                                            
+                                           @if(Model.AdminUsers != null)
+                                           {
+                                             @foreach(var admin in Model.AdminUsers)
+                                             {
+                                               <div class="row mt-3">
+                                                    <div class="col">
+                                                        <img class="rounded-2 my-auto" src="~/images/NoProfilePic.png" alt="prof" style="height:4vh; width:auto;">
+                                                    </div>
+                                                    <div class="col">
+                                                        <table>
+                                                            <tr>
+																<td class ="text-center">
+																    <h6 >@admin.FirstName </h6>
+                                                                  
+                                                                </td>
+                                                                <td class="text-center">                                                                       
+                                                                    <h6>@admin.LastName</h6>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                        
+                                                    </div>                          
+                                               </div> 
+                                             }
+                                           }
+                                            
+
+                                            <form asp-controller="Admin" asp-action="ManageUsers" method="post" class="row mt-3">
+                                                <input type="submit" class="btn fw-bold text-white rounded-4 p-2 border border-0 shadow" style="background-color: darkorange;" value="Assign Admin">
+                                            </form>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+

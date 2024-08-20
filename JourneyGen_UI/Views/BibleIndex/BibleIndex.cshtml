@@ -1,0 +1,91 @@
+﻿@model BibleIndexViewModel
+
+<div>
+    <div class="container-fluid ">
+        <div class="row">
+
+
+
+            <div class="col-2 col-lg-3 col-xl-1 bg-white shadow-lg" style="width: 25vh;">
+                <img src="~/images/Jounrey_Gen_Logo_WithText.png" alt="logo" class="p-3 my-2" style="object-fit:contain; display:inline-block; height:auto; width:100%;">
+
+                    <div class="container align-items-center me-3">
+
+
+                        <a class="btn btn-warning btn-large d-block my-4 fw-bold text-light fs-5 shadow-lg" style="background-color:darkorange;" asp-controller="Home" asp-action="GroupBoard">Post to Group</a>
+
+                        <a class="btn btn-transparent btn-large d-block fw-bold fs-5 mb-3" style="color:darkorange;" asp-controller="Home" asp-action="ReturnHome">Home</a>
+
+                        <a class="btn btn-transparent btn-large d-block fw-bold text-secondary fs-5 mb-3" asp-controller="Home" asp-action="GroupBoard">Group</a>
+
+                        <a class="btn btn-transparent btn-large d-block fw-bold text-secondary fs-5 mb-3" asp-controller="BibleIndex" asp-action="BibleIndex">Bible</a>
+
+                        <a class="btn btn-transparent btn-large d-block fw-bold text-secondary fs-5 mb-3">Resources</a>
+
+                        <a class="btn btn-transparent btn-large d-block fw-bold text-secondary fs-5 mb-3 mt-5">Settings</a>
+
+                    </div>
+
+                    <img src="~/images/JourneyGenMobile_Promo.jpg" alt="promo" style="width: 100%; height: 36vh; object-fit:cover;" class="rounded-4 shadow-lg mt-1">
+
+            </div>
+
+            
+            
+            <div class="col-4">
+                <div class="container p-4">
+
+                    <div class="accordion shadow-lg" id="accordionExample">
+                    
+                        @if (Model.BibleBooks != null)
+                        {
+                            @foreach (var book in Model.BibleBooks)
+                            {
+                                <form class="accordion-item" asp-controller="BibleIndex" asp-action="ChapterSelected">
+                                    <h2 class="accordion-header">
+
+                                        @* <input asp-for="SelectedChapterTitle" class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target=@($"#collapse{book.Title}") aria-expanded="false" aria-controls=@($"collapse{book.Title}") value="@book.Title"> *@
+                                        <input asp-for="SelectedChapterTitle" type="hidden" value="@book.Title">
+                                        <input class="accordion-button collapsed fw-bold"
+                                               type="button"
+                                               data-bs-toggle="collapse"
+                                               data-bs-target="@($"#collapse{book.Title}")"
+                                               aria-expanded="false"
+                                               aria-controls="@($"collapse{book.Title}")"
+                                               value="@book.Title">
+                                                                                  
+                                       
+                                    </h2>
+                                    <div id=@($"collapse{book.Title}") class="accordion-collapse collapse " data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+
+                                            @for (int i = 1; i <= book.Chapters; i++)
+                                            {                                                             
+                                               //<button class="fw-bold m-1 rounded-2" style="height:5vh; width:5vh;" value="@i">@i</button>
+                                               <input asp-for="SelectedChapterNum" type="submit" class="fw-bold m-1 rounded-2" style="height:5vh; width:5vh;" value="@i">
+                                            }
+
+                                        </div>
+                                    </div>
+                                </form>
+                            }                   
+                        }
+                                                
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="container p-4" style="height: auto;">
+                    
+                    <div class="container bg-white rounded-2 shadow-lg p-4">
+						<h1 class="mt-2 fw-bolder">@Model.ChapterViewName @Model.SelectedChapterNum</h1>
+                        <div class="mt-4" style="white-space: pre-line;">
+                            @Html.Raw(Model.SelectedChapterText)
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,310 @@
+﻿@model MessagesViewModel
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+<div style="height: 100vh; overflow: hidden;">
+	<div class="container-fluid">
+		<div class="row">
+
+
+			<div class="col-sm-12 col-2 col-lg-3 col-xl-1 bg-white  shadow-lg" style="width: 25vh;">
+				<img src="~/images/Jounrey_Gen_Logo_WithText.png" alt="logo" class="p-3 my-2" style="object-fit:contain; display:inline-block; height:auto; width:100%;">
+
+				<div class="container align-items-center me-3">
+
+
+					<a class="btn btn-warning btn-large d-block my-4 fw-bold text-light fs-5 shadow-lg" style="background-color:darkorange;">Post to Group</a>
+
+					<a class="btn btn-transparent btn-large d-block fw-bold fs-5 mb-3" style="color:darkorange;" asp-controller="Home" asp-action="ReturnHome">Home</a>
+
+					<a class="btn btn-transparent btn-large d-block fw-bold text-secondary fs-5 mb-3">Group</a>
+
+					<a class="btn btn-transparent btn-large d-block fw-bold text-secondary fs-5 mb-3" asp-controller="BibleIndex" asp-action="BibleIndex">Bible</a>
+
+					<a class="btn btn-transparent btn-large d-block fw-bold text-secondary fs-5 mb-3">Resources</a>
+
+					<a class="btn btn-transparent btn-large d-block fw-bold text-secondary fs-5 mb-3 mt-5">Settings</a>
+
+				</div>
+
+				<img src="~/images/JourneyGenMobile_Promo.jpg" alt="promo" style="width: 100%; height: 36vh; object-fit:cover;" class="rounded-4 shadow-lg mt-1 hide-on-small">
+
+			</div>
+
+
+
+			<div class="col bg-light">
+				<div class="container p-4">
+
+					<div class="row">
+						<h1 class="mb-2">Group Board</h1>
+					</div>
+
+					<div class="row">
+						<div class="col">
+
+							<div class="scrollable-container" id="scrollableContainer">
+
+								@foreach (var message in Model.Messages)
+								{
+									<div class="container p-4 rounded-3 shadow mb-3" style="background-color: white;">
+										<h6 class="fw-bold">
+											@message.FirstName @message.LastName
+										</h6>
+										<p>
+											@message.Content
+										</p>
+										<h6 class="fw-bold" style="text-align: end;">
+
+											@if (message.DatePosted.Date.ToString("MM / dd / yyyy") == DateTime.Now.Date.ToString("MM / dd / yyyy"))
+											{
+												@message.DatePosted.Date.ToString("HH:mm")
+												;
+
+											}
+											else
+											{
+												@message.DatePosted.Date.ToString("MM / dd / yyyy")
+												;
+											}
+
+										</h6>
+
+									</div>
+
+								}
+
+
+							</div>
+
+						</div>
+
+					</div>
+
+
+					<div class="row">
+						<div class="col d-flex justify-content-center">
+							<div class="floating-text-box w-100" style="max-width: 600px;">
+								<form class="input-group" method="post" asp-controller="GroupBoard" asp-action="PostMessage">
+									<textarea asp-for="Message.Content" id="messageInput" class="form-control" placeholder="Type your message here..."></textarea>
+									<button type="submit" class="btn btn-warning fw-bold text-white shadow" style="background-color: darkorange;">POST</button>
+								</form>
+							</div>
+						</div>
+					</div>
+
+
+				</div>
+			</div>
+
+
+
+
+
+			<div class="col-3 bg-light hide-on-small" style="width:35vh;">
+				<div class="container-fluid">
+
+					<div class="row">
+						<div class="col py-4">
+							<div class="container-fluid d-flex justify-content-end">
+								<img src="~/images/NoProfilePic.png" alt="profilephoto" class="d-inline mx-4 rounded-3" style="height: 6vh; width: 6vh; object-fit: cover;">
+								<h1 class="fs-5 d-inline mt-3 text-nowrap responsive-text">@Model.User.FirstName @Model.User.LastName</h1>
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+
+						<div class="accordion accordion-flush" id="accordionFlushExample">
+							<div class="accordion-item">
+								<h2 class="accordion-header">
+									<button class="accordion-button collapsed fw-bold text-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="true" aria-controls="flush-collapseOne">
+										Leaders
+									</button>
+								</h2>
+								<div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+									<div class="accordion-body">
+										<div class="container">
+
+
+											@if (Model.Leaders != null)
+											{
+												@foreach (var leader in Model.Leaders)
+												{
+													<div class="row mt-3">
+														<div class="col justify-content-center">
+															<img class="rounded-2 mx-auto" src="~/images/NoProfilePic.png" alt="prof" style="height:4vh; width:auto;">
+														</div>
+														<div class="col">
+															<table>
+																<tr>
+																	<td class="text-center" style="text-align:center;">
+																		<h6>@leader.FirstName </h6>
+
+																	</td>
+																	<td class="text-center" style="text-align:center;">
+																		<h6>@leader.LastName</h6>
+																	</td>
+																</tr>
+															</table>
+
+														</div>
+													</div>
+												}
+											}
+
+
+
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+
+					</div>
+
+
+
+					<div class="row mt-4">
+
+						<div class="accordion accordion-flush" id="accordionFlushExample">
+							<div class="accordion-item">
+								<h2 class="accordion-header">
+									<button class="accordion-button collapsed fw-bold text-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSix" aria-expanded="true" aria-controls="flush-collapseSix">
+										Students
+									</button>
+								</h2>
+								<div id="flush-collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+									<div class="accordion-body">
+										<div class="container">
+
+
+											@if (Model.Students != null)
+											{
+												@foreach (var student in Model.Students)
+												{
+													<div class="row mt-3">
+														<div class="col justify-content-center">
+															<img class="rounded-2 mx-auto" src="~/images/NoProfilePic.png" alt="prof" style="height:4vh; width:auto;">
+														</div>
+														<div class="col">
+															<table>
+																<tr>
+																	<td class="text-center" style="text-align:center; margin:5px;">
+																		<h6>@student.FirstName </h6>
+
+																	</td>
+																	<td class="text-center" style="text-align:center; margin:5px;">
+																		<h6>@student.LastName </h6>
+																	</td>
+																</tr>
+															</table>
+
+														</div>
+													</div>
+												}
+											}
+
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+	</div>
+</div>
+
+
+<script>
+	const messageInput = document.getElementById('messageInput');
+
+	messageInput.addEventListener('input', function () {
+
+		this.style.height = 'auto';
+
+		this.style.height = this.scrollHeight + 'px';
+	});
+
+</script>
+
+<script>
+	document.addEventListener("DOMContentLoaded", function () {
+		const messageInput = document.getElementById("messageInput");
+
+		// Function to adjust the height of the text input
+		function adjustHeight() {
+			messageInput.style.height = "auto";
+			messageInput.style.height = messageInput.scrollHeight + "px";
+		}
+
+		// Adjust height on input
+		messageInput.addEventListener("input", adjustHeight);
+
+		// Initial adjustment
+		adjustHeight();
+	});
+</script>
+
+
+<script>
+	$(document).ready(function () {
+		function callServerMethod() {
+			const groupId = '@Model.User.GroupId';  // Razor variable to pass GroupId
+
+			$.ajax({
+				url: `https://localhost:7229/api/Messages/GetMessagesByGroupId?groupId=${groupId}`,  // Interpolated URL
+				method: 'GET',
+				success: function (response) {
+					$('#scrollableContainer').empty();  // Clear existing messages
+
+					// Get today's date without time
+					const today = new Date();
+					today.setHours(0, 0, 0, 0);  // Set time to midnight
+
+					response.forEach(function (message) {
+						const messageDate = new Date(message.datePosted);
+
+						// Reset time to midnight for comparison
+						const messageDateStart = new Date(messageDate);
+						messageDateStart.setHours(0, 0, 0, 0);
+
+						// Check if the message date is today
+						let formattedDate;
+						if (messageDateStart.getTime() === today.getTime()) {
+							// If the date is today, format as hours and minutes
+							formattedDate = messageDate.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+						} else {
+							// If the date is not today, format as MM/dd
+							formattedDate = messageDate.toLocaleDateString([], { month: '2-digit', day: '2-digit' });
+						}
+
+						// Append the formatted message
+						$('#scrollableContainer').append(
+							`<div class="container p-4 rounded-3 shadow mb-3" style="background-color: white;">
+									<h6 class="fw-bold">${message.firstName} ${message.lastName}</h6>
+									<p>${message.content}</p>
+									<h6 class="fw-bold" style="text-align: end;">${formattedDate}</h6>
+								</div>`
+						);
+					});
+
+
+				},
+				error: function (error) {
+					console.log('Error:', error);
+				}
+			});
+		}
+
+		// Call the method every 5 seconds
+		setInterval(callServerMethod, 5000);
+
+		// Initial call to load messages on page load
+		callServerMethod();
+	});
+</script>

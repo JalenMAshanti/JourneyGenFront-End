@@ -1,0 +1,88 @@
+﻿@model RegisterViewModel
+
+
+<div class="container-fluid" style="height:100vh;">
+    <div class="row">
+        <div class="col">
+            <div class="container-fluid  d-flex justify-content-center align-items-center" style="height: 100vh;">
+                <form class="container p-5 rounded-5 text-center shadow-lg" style="width: auto" asp-controller="Register" asp-action="AttemptAccountRegister">
+                    <h1 class="fw-bold text-secondary m-4">Register</h1>
+                    <div class="row mx-auto justify-content-center">
+
+                        <div class="col-auto">
+
+                            <input asp-for="Email" class="d-block rounded-pill m-4 p-2 fw-bold" type="email" placeholder="Email" style="border-style: solid; width: 30vh;" required>
+                            <input asp-for="Password" class="d-block rounded-pill m-4 p-2 fw-bold" type="password" placeholder="Password" style="border-style: solid; width: 30vh;" required>
+                            <input class="d-block rounded-pill m-4 p-2 fw-bold" type="password" placeholder="Re-Type Password" style="border-style: solid; width: 30vh;" required>
+                            <input asp-for="PhoneNumber" class="d-block rounded-pill m-4 p-2 fw-bold" type="text" placeholder="Phone Number" style="border-style: solid; width: 30vh;" required>
+
+                        </div>
+
+
+                        <div class="col-auto ">
+                            <div class="row">
+                                <div class="col">
+
+                                    <input asp-for="FirstName" class="d-block rounded-pill m-4 p-2 fw-bold" type="text" placeholder="First Name" style="border-style: solid; width: 30vh;">
+                                    <input asp-for="LastName" class="d-block rounded-pill m-4 p-2 fw-bold" type="text" placeholder="LastName" style="border-style: solid; width: 30vh;">
+                                    <select asp-for="RoleId" class="form-select border-secondary border-2 rounded-pill m-4 p-2 fw-bold text-secondary" aria-label="Default select example" style="border-style: solid; width: 30vh;" required>
+                                        <option selected>What is your Role?</option>
+                                        <option value="1">Student</option>
+                                        <option value="2">Leader</option>
+                                    </select>
+
+                                    <select asp-for="Gender" class="form-select border-secondary border-2 rounded-pill my-2 p-2 fw-bold text-secondary d-inline" aria-label="Default select example" style="border-style: solid; width: 15vh;" required>
+                                        <option selected>Gender</option>
+                                        <option value="Male">Male</option>
+                                        <option value="Female">Female</option>
+                                        <option value="Other">Other</option>
+                                    </select>
+
+                                    <select asp-for="Grade" class="form-select border-secondary border-2 rounded-pill my-2 p-2 fw-bold text-secondary d-inline" aria-label="Default select example" style="border-style: solid; width: 15vh;" required>
+                                        <option selected>Grade</option>
+                                        <option value="0">Not a student</option>
+                                        <option value="5">5th</option>
+                                        <option value="6">6th</option>
+                                        <option value="7">7th</option>
+                                        <option value="8">8th</option>
+                                        <option value="9">9th</option>
+                                        <option value="10">10th</option>
+                                        <option value="11">11th</option>
+                                        <option value="12">12th</option>
+                                    </select>
+
+
+                                </div>
+                            </div>
+
+
+
+
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col p-4 align-items-center">
+                            <div class="container" style="width: auto;">
+                                <a class="text-secondary my-3" style="display: block;" asp-controller="Home" asp-action="Login"> Already have an account? Login here</a>
+                                <button  type="submit" class="shadow-lg rounded-pill mx-auto p-2 text-white fw-bold fs-4" style="border-style: none; width: 30vh; display: block; background-color:darkorange;">Register</button>
+                                <h3></h3>
+                            </div>
+
+                        </div>
+                    </div>
+                </form>
+
+
+            </div>
+        </div>
+        <div class="col hide-on-small hide-md">
+            <div class="container-fluid rounded-start-5 shadow-lg d-flex align-items-center my-container" style="height: 100vh; width:100vh; background-color:darkorange;">
+                <div class="container  justify-content-center text-center" style="width: 100%;">
+                    <h1 class="fw-bold text-white mx-auto" style="font-size: 300%;">We are glad you're here!,</h1>
+                    <h1 class="fw-bold text-white ps-5 mt-5 ms-5" style="font-size: 200%;"></h1>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

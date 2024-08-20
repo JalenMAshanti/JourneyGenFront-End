@@ -1,0 +1,270 @@
+﻿@model DashboardViewModel
+
+<div class="container-fluid bg-light ">
+	<div class="row full-height">
+
+		<div class="col-sm-12 col-2 col-lg-3 col-xl-1 bg-white shadow-lg" style="width: 25vh;">
+			<img src="~/images/Jounrey_Gen_Logo_WithText.png" alt="logo" class="p-3 my-2" style="object-fit:contain; display:inline-block; height:auto; width:100%;">
+			
+
+				<div class="container align-items-center me-3">
+
+
+					<a class="btn btn-warning btn-large d-block my-4 fw-bold text-light fs-5 shadow-lg" style="background-color:darkorange;" asp-controller="Home" asp-action="GroupBoard">Post to Group</a>
+
+					<a class="btn btn-transparent btn-large d-block fw-bold fs-5 mb-3" style="color:darkorange;" asp-controller="Home" asp-action="ReturnHome">Home</a>
+
+					<a class="btn btn-transparent btn-large d-block fw-bold text-secondary fs-5 mb-3" asp-controller="Home" asp-action="GroupBoard">Group</a>
+
+					<a class="btn btn-transparent btn-large d-block fw-bold text-secondary fs-5 mb-3" asp-controller="BibleIndex" asp-action="BibleIndex">Bible</a>
+
+
+					<a class="btn btn-transparent btn-large d-block fw-bold text-secondary fs-5 mb-3">Resources</a>
+
+
+					@if (Model.User.RoleId == 3)
+					{
+						<a class="btn btn-transparent btn-large d-block fw-bold text-secondary fs-5 mb-5" asp-controller="Admin" asp-action="InitAdmin">Admin</a>
+					}
+
+
+
+					<a class="btn btn-transparent btn-large d-block fw-bold text-secondary fs-5 mb-3 mt-5">Settings</a>
+
+				</div>
+
+				<img src="~/images/JourneyGenMobile_Promo.jpg" alt="promo" style="width: 100%; height: 36vh; object-fit:cover;" class="rounded-4 shadow-lg mt-1 hide-on-small">
+
+
+		</div>
+
+
+		<div class="col bg-light">
+			<!-- Middle Column Row 1 START -->
+			<div class="row align-items-center">
+
+				<div class=" mt-4 mb-2 input-group input-group-lg" style="width:100%;">
+					<div class="row" style="width:100%;">
+						<div class="col-10">
+							<input type="text" class="form-control rounded-pill transparent-border-input fs-6" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" placeholder="Search for other JourneyGen Members">
+						</div>
+						<div class="col-2">
+							<button class="btn rounded-pill fw-bold text-white my-auto mx-auto" style="background-color:darkorange;">Search</button>
+						</div>
+					</div>
+				</div>
+
+				<h3 class="fw-bold ms-3">Verse of the Day</h3>
+
+				<div class="container-fluid">
+					<div class="m-3 rounded-4 shadow-lg fit-div">
+						<img src="@Model.PrexelImage.Photo" alt="@Model.PrexelImage.Alt">
+						<h4 class="overlay-text" style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);"> @Model.VerseOfTheDay.Verse </h4>
+						<h6 class="overlay-sub" style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);"> @Model.VerseOfTheDay.VerseLocation </h6>
+					</div>
+				</div>
+
+			</div>
+			<!-- Middle Column Row 1 END -->
+			<!-- Middle Column Row 2 START -->
+			<div class="row mt-4">
+
+				<div class="col px-4">
+
+
+					<div class="container-fluid bg-white rounded-4 p-4 shadow-lg mb-2">
+						<h4 class="fs-5 fw-bold">Recent Activity</h4>
+
+						@if (Model.RecentActivity != null)
+						{
+							@foreach (var message in Model.RecentActivity)
+							{
+								<div class="row bg-light shadow rounded-4 ms-3 me-3 mt-2 p-4">
+									<h5 class="fs-6 fw-bold text-secondary"> @message.FirstName @message.LastName</h5>
+									<p class="text-secondary">@message.Content</p>
+									<p class="fw-bold text-secondary">@message.DatePosted.Date.ToString("dddd, MMMM dd")</p>
+								</div>
+
+							}
+
+						}
+						else
+						{
+							<h4>No Recent Activity</h4>
+						}
+
+						<div class="row mt-3 ">
+							<div class="container-fluid d-flex justify-content-center">
+								<a class="fw-bold" style="color:darkorange;" asp-controller="Home" asp-action="GroupBoard">View All</a>
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+				<div class="col">
+					<div class="container-fluid px-4" style="height:100%;">
+
+						<div class="row" style="height:50%;">
+							<div class="container p-4 mb-3 bg-white rounded-4 shadow-lg text-center">
+								<h4 class="fw-bold fs-5">Reading Streak</h4>
+								<h1 class="fw-bold p-2" style="font-size:7vh;">@Model.User.ReadingStreak</h1>
+							</div>
+						</div>
+						<div class="row pb-2" style="height: 50%;">
+							<div class="container p-5  bg-white rounded-4 shadow-lg" style="height:100%;">
+								<h4 class="fw-bold fs-5">Upcoming Events</h4>
+								<h3 class="fw-bold fs-3 p-2">Sepetember 3rd: Welcome Back converge</h3>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+			<!-- Middle Column Row 2 END -->
+		</div>
+
+
+
+		<div class="col-3 bg-light hide-on-small" style="width:auto;">
+			<div class="container-fluid">
+
+				<div class="row">
+					<div class="col py-4">
+						<div class="container-fluid d-flex justify-content-end">
+							<img src="~/images/NoProfilePic.png" alt="profilephoto" class="d-inline mx-4 rounded-3" style="height: 6vh; width: 6vh; object-fit: cover;">
+							<h1 class="fs-5 d-inline mt-3 text-nowrap responsive-text">@Model.User.FirstName @Model.User.LastName</h1>
+						</div>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="container bg-light" style="height: auto; padding:0px;">
+
+						@if (Model.User.RoleId > 1)
+						{
+							<div class="accordion accordion-flush" id="accordionFlushExample">
+								<div class="accordion-item">
+									<h2 class="accordion-header">
+										<button class="accordion-button collapsed fw-bold text-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="true" aria-controls="flush-collapseOne">
+											Students
+										</button>
+									</h2>
+									<div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+										<div class="accordion-body">
+											<div class="container">
+
+												@if (Model.Students != null)
+												{
+													@foreach (var student in Model.Students)
+													{
+														<div class="row mt-3">
+															<div class="col justify-content-center">
+																<img class="rounded-2 mx-auto" src="~/images/NoProfilePic.png" alt="prof" style="height:4vh; width:auto;">
+															</div>
+															<div class="col">
+																<table>
+																	<tr>
+																		<td class="text-center" style="text-align:center; margin:5px;">
+																			<h6>@student.FirstName </h6>
+
+																		</td>
+																		<td class="text-center" style="text-align:center; margin:5px;">
+																			<h6>@student.LastName </h6>
+																		</td>
+																	</tr>
+																</table>
+
+															</div>
+														</div>
+													}
+												}
+
+
+												<form asp-controller="" asp-action="" method="post" class="row mt-3">
+													<input type="submit" class="btn fw-bold text-white rounded-4 p-2 border border-0 shadow" style="background-color: darkorange;" value="View Students">
+												</form>
+
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+						}
+						else
+						{
+							<div class="accordion accordion-flush" id="accordionFlushExample">
+								<div class="accordion-item">
+									<h2 class="accordion-header">
+										<button class="accordion-button collapsed fw-bold text-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="true" aria-controls="flush-collapseOne">
+											Leaders
+										</button>
+									</h2>
+									<div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+										<div class="accordion-body">
+											<div class="container">
+
+												@if (Model.Leaders != null)
+												{
+													@foreach (var leader in Model.Leaders)
+													{
+														<div class="row mt-3">
+															<div class="col justify-content-center">
+																<img class="rounded-2 mx-auto" src="~/images/NoProfilePic.png" alt="prof" style="height:4vh; width:auto;">
+															</div>
+															<div class="col">
+																<table>
+																	<tr>
+																		<td class="text-center" style="text-align:center;">
+																			<h6>@leader.FirstName </h6>
+
+																		</td>
+																		<td class="text-center" style="text-align:center;">
+																			<h6>@leader.LastName</h6>
+																		</td>
+																	</tr>
+																</table>
+
+															</div>
+														</div>
+													}
+												}
+
+
+												<form asp-controller="" asp-action="" method="post" class="row mt-3">
+													<input type="submit" class="btn fw-bold text-white rounded-4 p-2 border border-0 shadow" style="background-color: darkorange;" value="View Leaders">
+												</form>
+
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+						}
+
+
+					</div>
+				</div>
+				<div class="row">
+					<div class="container p-4">
+						<h4 class="">Todays Challenges</h4>
+						<p class="text-secondary fw-bold">@Model.TodaysDate</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="container">
+						<ul style="list-style-type: none;">
+							<li>
+								<div class="container-fluid rounded-3 bg-white shadow-sm p-4">
+									<h4 class="fs-6 mx-auto">No Challenges today</h4>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
