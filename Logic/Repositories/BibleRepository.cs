@@ -20,7 +20,7 @@ namespace Logic.Repositories
 
 		public async Task<VerseOfTheDay> GetVerseOfTheDay()
 		{
-			var verse = await _externalApiService.GetAPIResponse<VerseAPIResponse>(_client, "https://localhost:7229/GetVerseOfTheDay");
+			var verse = await _externalApiService.GetAPIResponse<VerseAPIResponse>(_client, $"{AppSettings.azureBaseAdress}/GetVerseOfTheDay");
 			var result = Verse_Mapper.VerseMapper(verse);
 			UserCookies.VerseOfTheDay = result;
 			return result;
@@ -28,12 +28,12 @@ namespace Logic.Repositories
 
 		public async Task UpdateUserBibleReadingStreak()
 		{
-			await _externalApiService.PutAPIRequest($"https://localhost:7229/api/User/UpdateUserReadingStreak?userId={UserCookies.currentUser.Id}", "");
+			await _externalApiService.PutAPIRequest($"{AppSettings.azureBaseAdress}/api/User/UpdateUserReadingStreak?userId={UserCookies.currentUser.Id}", "");
 		}
 
 		public async Task<string> GetBibleChapterText(string chapterTitle, int chapterNumber) 
 		{
-			var response = await _externalApiService.GetAPIResponse<ChapterTextAPIResponse>(_client, $"https://localhost:7229/GetBibleChapter?book={chapterTitle}&chapter={chapterNumber}");
+			var response = await _externalApiService.GetAPIResponse<ChapterTextAPIResponse>(_client, $"{AppSettings.azureBaseAdress}/GetBibleChapter?book={chapterTitle}&chapter={chapterNumber}");
 			var text = Chapter_Mapper.ChapterMapper(response);
 			var result = StringFormattingHelpers.FormatBibleChapter(text);
 			return result;	
@@ -76,6 +76,43 @@ namespace Logic.Repositories
 				BibleBooks.Add(new BibleBook("Joel", 3));
 				BibleBooks.Add(new BibleBook("Amos", 9));
 				BibleBooks.Add(new BibleBook("Obadiah", 1));
+				BibleBooks.Add(new BibleBook("Jonah", 4));
+				BibleBooks.Add(new BibleBook("Micah", 7));
+				BibleBooks.Add(new BibleBook("Nahum", 3));
+				BibleBooks.Add(new BibleBook("Habakkuk", 3));
+				BibleBooks.Add(new BibleBook("Zephaniah", 3));
+				BibleBooks.Add(new BibleBook("Haggai", 2));
+				BibleBooks.Add(new BibleBook("Zechariah", 14));
+				BibleBooks.Add(new BibleBook("Malachi", 4));
+				BibleBooks.Add(new BibleBook("Matthew", 28));
+				BibleBooks.Add(new BibleBook("Mark", 16));
+				BibleBooks.Add(new BibleBook("Luke", 24));
+				BibleBooks.Add(new BibleBook("John", 21));
+				BibleBooks.Add(new BibleBook("Acts", 28));
+				BibleBooks.Add(new BibleBook("Romans", 16));
+				BibleBooks.Add(new BibleBook("1 Corinthians", 16));
+				BibleBooks.Add(new BibleBook("2 Corinthians", 13));
+				BibleBooks.Add(new BibleBook("Galations", 6));
+				BibleBooks.Add(new BibleBook("Ephesians", 6));
+				BibleBooks.Add(new BibleBook("Philippians", 4));
+				BibleBooks.Add(new BibleBook("Colossians", 4));
+				BibleBooks.Add(new BibleBook("1 Thessalonians", 5));
+				BibleBooks.Add(new BibleBook("2 Thessalonians", 3));
+				BibleBooks.Add(new BibleBook("1 Timothy", 6));
+				BibleBooks.Add(new BibleBook("2 Timothy", 4));
+				BibleBooks.Add(new BibleBook("Titus", 3));
+				BibleBooks.Add(new BibleBook("Philemon", 1));
+				BibleBooks.Add(new BibleBook("Hebrews", 13));
+				BibleBooks.Add(new BibleBook("James", 5));
+				BibleBooks.Add(new BibleBook("1 Peter", 5));
+				BibleBooks.Add(new BibleBook("2 Peter", 3));
+				BibleBooks.Add(new BibleBook("1 John", 5));
+				BibleBooks.Add(new BibleBook("2 John", 1));
+				BibleBooks.Add(new BibleBook("3 John", 1));
+				BibleBooks.Add(new BibleBook("Jude", 1));
+				BibleBooks.Add(new BibleBook("Revelation", 22));
+
+
 				return BibleBooks;
 			}
 

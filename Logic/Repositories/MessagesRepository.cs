@@ -17,14 +17,14 @@ namespace Logic.Repositories
 
 		public async Task<IEnumerable<Message>> GetRecentActivityByGroupId(int groupId) 
 		{
-			var messages = await _externalApiService.GetListAPIResponse<MessagesAPIResponse>(_client, $"https://localhost:7229/api/Messages/GetRecentActivityByGroupId?groupId={groupId}");
+			var messages = await _externalApiService.GetListAPIResponse<MessagesAPIResponse>(_client, $"{AppSettings.azureBaseAdress}/api/Messages/GetRecentActivityByGroupId?groupId={groupId}");
 			var result = Message_Mapper.MapMessage(messages);
 			return result;
 		}
 
 		public async Task<IEnumerable<Message>> GetMessagesByGroupId(int groupId)
 		{
-			var messages = await _externalApiService.GetListAPIResponse<MessagesAPIResponse>(_client, $"https://localhost:7229/api/Messages/GetMessagesByGroupId?groupId={groupId}");
+			var messages = await _externalApiService.GetListAPIResponse<MessagesAPIResponse>(_client, $"{AppSettings.azureBaseAdress}/api/Messages/GetMessagesByGroupId?groupId={groupId}");
 			var result = Message_Mapper.MapMessage(messages);
 			return result;
 		}

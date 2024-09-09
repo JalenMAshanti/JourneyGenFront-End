@@ -3,6 +3,7 @@ using Logic.API;
 using Logic.API.ApiResponses;
 using Logic.Cookies.UserData;
 using Logic.Mappers;
+using Logic.Models;
 using Logic.Repositories;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
@@ -58,7 +59,7 @@ namespace JourneyGen_UI.Controllers
 
 			try
 			{
-				dashboardViewModel.User = Login_UserMapper.LoginUserMapper(_loginAPIService.GetAPIResponse<LoginApiResponse>(_client, $"https://localhost:7229/api/Login/UserLogin?email={login.request.Email}&password={login.request.Password}").Result);
+				dashboardViewModel.User = Login_UserMapper.LoginUserMapper(_loginAPIService.GetAPIResponse<LoginApiResponse>(_client, $"{AppSettings.azureBaseAdress}/api/Login/UserLogin?email={login.request.Email}&password={login.request.Password}").Result);
 				UserCookies.currentUser = dashboardViewModel.User;
 			}
 			catch

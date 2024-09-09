@@ -1,4 +1,5 @@
 ﻿using Logic.Factories;
+using Logic.Models;
 using Newtonsoft.Json;
 using System.Text;
 using JsonSerializer = System.Text.Json.JsonSerializer;

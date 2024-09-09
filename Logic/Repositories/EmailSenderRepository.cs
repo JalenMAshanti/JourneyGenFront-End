@@ -1,4 +1,5 @@
 ﻿using Logic.API;
+using Logic.Models;
 
 namespace Logic.Repositories
 {
@@ -17,7 +18,7 @@ namespace Logic.Repositories
 
 		public async Task SendEmail(string emailTo, string subject, string body)
 		{
-			await _backUpAPIService.PostAPIRequestSecondary(_client, $"https://localhost:7229/api/Email/SendEmailFromAdminAccount?email={emailTo}&subject={subject}&message={body}", "");
+			await _backUpAPIService.PostAPIRequestSecondary(_client, $"{AppSettings.azureBaseAdress}/api/Email/SendEmailFromAdminAccount?email={emailTo}&subject={subject}&message={body}", "");
 		}
 
 		public async Task NewRegistrationEmailToAdmin( string emailTo, string firstName, string lastName, int roleId) 

@@ -22,7 +22,7 @@ namespace Logic.Repositories
 
 		public async Task<PrexelImage> GetVODBackgroundImage()
 		{
-			_client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("T7RmfPvNjN951ZZ4uMmnsQ27ljbpIsC1XUK4lrumRpaM0RGVZelrNdKg");
+			_client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue($"{AppSettings.prexelKey}");
 			var image = await _externalApiService.GetAPIResponse<PrexelAPIResponse>(_client, $"https://api.pexels.com/v1/search?query=nature&page={_random.Next(1, 100)}&per_page={_random.Next(1, 30)}");
 			var result = PrexelImage_Mapper.PrexelMapper(image);
 			_client.DefaultRequestHeaders.Authorization = null;

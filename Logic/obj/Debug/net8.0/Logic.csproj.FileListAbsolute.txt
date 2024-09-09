@@ -10,3 +10,4 @@ E:\SoftwareDevelopmentHub\Projects\JourneyGen\Frontend\Logic\obj\Debug\net8.0\Lo
 E:\SoftwareDevelopmentHub\Projects\JourneyGen\Frontend\Logic\obj\Debug\net8.0\refint\Logic.dll
 E:\SoftwareDevelopmentHub\Projects\JourneyGen\Frontend\Logic\obj\Debug\net8.0\Logic.pdb
 E:\SoftwareDevelopmentHub\Projects\JourneyGen\Frontend\Logic\obj\Debug\net8.0\ref\Logic.dll
+E:\SoftwareDevelopmentHub\Projects\JourneyGen\Frontend\Logic\obj\Debug\net8.0\Logic.sourcelink.json

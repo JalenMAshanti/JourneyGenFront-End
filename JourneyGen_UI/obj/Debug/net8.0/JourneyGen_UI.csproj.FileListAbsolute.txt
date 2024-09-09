@@ -34,3 +34,4 @@ E:\SoftwareDevelopmentHub\Projects\JourneyGen\Frontend\JourneyGen_UI\obj\Debug\n
 E:\SoftwareDevelopmentHub\Projects\JourneyGen\Frontend\JourneyGen_UI\obj\Debug\net8.0\JourneyGen_UI.pdb
 E:\SoftwareDevelopmentHub\Projects\JourneyGen\Frontend\JourneyGen_UI\obj\Debug\net8.0\JourneyGen_UI.genruntimeconfig.cache
 E:\SoftwareDevelopmentHub\Projects\JourneyGen\Frontend\JourneyGen_UI\obj\Debug\net8.0\ref\JourneyGen_UI.dll
+E:\SoftwareDevelopmentHub\Projects\JourneyGen\Frontend\JourneyGen_UI\obj\Debug\net8.0\JourneyGen_UI.sourcelink.json
